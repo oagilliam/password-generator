@@ -3,18 +3,42 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 
 let optionOne = document.getElementById("password1");
 let optionTwo = document.getElementById("password2");
+let pwLength = document.getElementById("password-length");
+let slider = document.getElementById("slider-range");
+let newPassword1 = '';
+let newPassword2 = '';
 
-// This function displays two randomly generated strings that are 15 characters long
-function generatePassword() {
-    optionOne.innerText = ' '; //Resets the password after each click
-    for(i=0; i < 15; i++){
-        let randomCharacterPW1 = characters[ (Math.floor( Math.random() * characters.length )) ];
-        optionOne.innerText += randomCharacterPW1;
-    }
+slider.addEventListener('input',valueChange);
 
-    optionTwo.innerText = ' '; //Resets the password after each click
-    for(i=0; i < 15; i++){
-        let randomCharacterPW2 = characters[ (Math.floor( Math.random() * characters.length )) ];
-        optionTwo.innerText += randomCharacterPW2;
-    }
+function valueChange(){
+    pwLength.innerHTML = this.value;
+    let val = this.value;
+    passwordFunction(val);
 }
+// This function displays two randomly generated strings that match the character length set by the user
+function passwordFunction(lengthValue) {
+    
+    let charachters1 = ''
+    for(i=0; i < lengthValue; i++){
+        randomCharacterPW1 = characters[ (Math.floor( Math.random() * characters.length )) ];
+        charachters1 += randomCharacterPW1;
+        newPassword1 = charachters1
+    }
+
+    
+    let charachters2 = ''
+    for(i=0; i < lengthValue; i++){
+        randomCharacterPW2 = characters[ (Math.floor( Math.random() * characters.length )) ];
+        charachters2 += randomCharacterPW2;
+        newPassword2 = charachters2
+    }
+
+} 
+
+function generatePassword(){
+    optionOne.innerText = newPassword1;
+    optionTwo.innerText = newPassword2;
+
+}
+
+

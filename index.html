@@ -14,11 +14,18 @@
         <title>Password Generator</title>
     </head>
     <body>
-        <div id="wrapper">
+        <div class="wrapper">
             <h1 class="heading-1">Generate a</h1>
             <h1 class="heading-2">random password</h1>
             <p class="subheading">Never use an insecure password again.</p>
-            <div id="wrapper-2">
+            <div class="password-length-container">
+                <p class="password-length">Password Length</p>
+                <div class="value-box" id="password-length">10</div>
+            </div>
+            <div class="slider-container">
+                <input id="slider-range" type="range" min="8" max="15" value="10" oninput="valueChange(this.value)">
+            </div>
+            <div class="wrapper-2">
                 <button id="generatePassword-btn" onclick="generatePassword()">Generate passwords</button>
                 <div class="divider"></div>
                 <div class="passwordsWrapper">

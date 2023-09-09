@@ -7,33 +7,91 @@ body{
     color: white;
     font-family: 'Karla', sans-serif;
     margin: 0px;
-    font-size: 40px;
+    font-size: 5ch;
 }
 
 .heading-2{
     color: #10B981;
     font-family: 'Karla', sans-serif;
     margin:0px;
-    font-size: 40px;
+    font-size: 5ch;
 }
 
 .subheading{
     color: #D5D4D8;
     font-family: 'Karla', sans-serif;
     font-weight: 10px;
-    font-size: 25px;
+    font-size: 3ch;
     margin-top: 8px;
 }
 
-#wrapper{
+.password-length-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.password-length{
+    color: #D5D4D8;
+    font-family: 'Karla', sans-serif;
+    font-size: 2.3ch;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.value-box{
+    width: 5%;
+    height: 5%;
+    color: white;
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Karla', sans-serif;
+    border-radius: 6px;
+    font-size: 2ch;
+    background: #10B981;
+    text-align: center;
+    border: 2px solid #089969;
+}
+
+.wrapper{
     width: 800px;
     height:400px;
     margin-top: 70px;
     margin-left: 50px;
 }
 
-#generatePassword-btn{
+.slider-container{
+    width: 30%;
+}
+
+#slider-range{
+  -webkit-appearance: none; 
+  appearance: none; 
+  width: 100%; 
+  height: 5px; 
+  background:white;
+  border-radius: 6px;
+  border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#slider-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid #089969;;
+    border-radius: 50%;
+    background:#10B981;
+  }
+
+
+button{
     background-color: #10B981;
+    text-shadow: 0px 0px .3px #1F2937;
     color: white;
     border-radius: 6px;
     border: none;
