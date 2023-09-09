@@ -11,53 +11,52 @@ let specialChar = document.getElementById("special-characters-checkbox");
 let numberChar = document.getElementById("numbers-checkbox");
 
 
-
-
-// This function displays the value picked by the slider
-slider.addEventListener('input',valueChange);
-
-function valueChange(){
-    pwLength.innerHTML = this.value;
-    let val = this.value;
-    passwordFunction(val);
-}
-
 let newPassword1 = '';
 let newPassword2 = '';
 
+// This function displays the value picked by the slider
+slider.addEventListener('input',charLengthValue);
+
+function charLengthValue(){
+    pwLength.innerHTML = this.value;
+    let val = this.value;
+    generatePassword(val);
+}
+
+
 // This function creates two strings with randomly generated characters
-function passwordFunction(lengthValue) {
+function generatePassword(charLimit) {
     newPassword1 = '';
     newPassword2 = '';
     
-    for(i=0; i < lengthValue; i++){
+    for(i=0; i < charLimit; i++){
         if(specialChar.checked == true && numberChar.checked == true){
-            randomCharacterPW1 = characters[ (Math.floor( Math.random() * characters.length )) ];
-            randomCharacterPW2 = characters[ (Math.floor( Math.random() * characters.length )) ];
+            let randomCharacterPW1 = characters[ (Math.floor( Math.random() * characters.length )) ];
+            let randomCharacterPW2 = characters[ (Math.floor( Math.random() * characters.length )) ];
             newPassword1 += randomCharacterPW1;
             newPassword2 += randomCharacterPW2;
         } else if (specialChar.checked == true && numberChar.checked == false){
-            randomCharacterPW1 = charactersWithoutNumbers[ (Math.floor( Math.random() * charactersWithoutNumbers.length )) ];
-            randomCharacterPW2 = charactersWithoutNumbers[ (Math.floor( Math.random() * charactersWithoutNumbers.length )) ];
+            let randomCharacterPW1 = charactersWithoutNumbers[ (Math.floor( Math.random() * charactersWithoutNumbers.length )) ];
+            let randomCharacterPW2 = charactersWithoutNumbers[ (Math.floor( Math.random() * charactersWithoutNumbers.length )) ];
             newPassword1 += randomCharacterPW1;
             newPassword2 += randomCharacterPW2;
         } else if (specialChar.checked == false && numberChar.checked == true){
-            randomCharacterPW1 = charactersWithoutSpecialCharacters[ (Math.floor( Math.random() * charactersWithoutSpecialCharacters.length )) ];
-            randomCharacterPW2 = charactersWithoutSpecialCharacters[ (Math.floor( Math.random() * charactersWithoutSpecialCharacters.length )) ];
+            let randomCharacterPW1 = charactersWithoutSpecialCharacters[ (Math.floor( Math.random() * charactersWithoutSpecialCharacters.length )) ];
+            let randomCharacterPW2 = charactersWithoutSpecialCharacters[ (Math.floor( Math.random() * charactersWithoutSpecialCharacters.length )) ];
             newPassword1 += randomCharacterPW1;
             newPassword2 += randomCharacterPW2;
         } else{
-            randomCharacterPW1 = letterCharacters[ (Math.floor( Math.random() * letterCharacters.length )) ];
-            randomCharacterPW2 = letterCharacters[ (Math.floor( Math.random() * letterCharacters.length )) ];
+            let randomCharacterPW1 = letterCharacters[ (Math.floor( Math.random() * letterCharacters.length )) ];
+            let randomCharacterPW2 = letterCharacters[ (Math.floor( Math.random() * letterCharacters.length )) ];
             newPassword1 += randomCharacterPW1;
             newPassword2 += randomCharacterPW2;
         }
+        //displayPasswords()
     }
 } 
 
 // This function displays two randomly generated strings that match the character length set by the user
-function generatePassword(){
+function displayPasswords(){
     optionOne.innerText = newPassword1;
     optionTwo.innerText = newPassword2;
-    passwordFunction()
 }
