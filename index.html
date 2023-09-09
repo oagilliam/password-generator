@@ -2,11 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap" rel="stylesheet">
@@ -14,26 +12,36 @@
         <title>Password Generator</title>
     </head>
     <body>
-        <div class="wrapper">
+        <main class="main-wrapper">
             <h1 class="heading-1">Generate a</h1>
             <h1 class="heading-2">random password</h1>
             <p class="subheading">Never use an insecure password again.</p>
             <div class="password-length-container">
                 <p class="password-length">Password Length</p>
-                <div class="value-box" id="password-length">10</div>
+                <div class="value-box" id="password-length">0</div>
             </div>
             <div class="slider-container">
                 <input id="slider-range" type="range" min="8" max="15" value="10" oninput="valueChange(this.value)">
             </div>
-            <div class="wrapper-2">
-                <button id="generatePassword-btn" onclick="generatePassword()">Generate passwords</button>
-                <div class="divider"></div>
-                <div class="passwordsWrapper">
-                    <p id="password1"></p>
-                    <p id="password2"></p>
+            <button id="generatePassword-btn" onclick="generatePassword()">Generate passwords</button>
+            <div class="checkbox-container">
+                <div>
+                    <input type="checkbox" class="checkbox-box" id="special-characters-checkbox" name="special-characters-checkbox" value="special-characters" onclick="generatePassword()">
+                    <label for="special-characters-checkbox">Special Characters</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox-box" id="numbers-checkbox" name="numbers-checkbox" value="number-characters" onclick="generatePassword()">
+                    <label for="number-characters-checkbox">Numbers</label>
                 </div>
             </div>
-        </div>
+            <div class="divider"></div>
+            <div class="passwordsWrapper">
+                <p id="password1"></p>
+                <p id="password2"></p>
+            </div>
+        </main>
         <script src="index.js"></script>
     </body>
 </html>
+
+

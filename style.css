@@ -55,7 +55,7 @@ body{
     border: 2px solid #089969;
 }
 
-.wrapper{
+.main-wrapper{
     width: 800px;
     height:400px;
     margin-top: 70px;
@@ -88,6 +88,15 @@ body{
     background:#10B981;
   }
 
+  #slider-range::-webkit-slider-thumb:active{
+    -webkit-appearance: none;
+    appearance: none;
+    background:#10B981;
+    transform: scale(0.85);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.3s;
+  }
+
 
 button{
     background-color: #10B981;
@@ -97,11 +106,28 @@ button{
     border: none;
     padding: 9px 17px 9px 15px;
     margin-top: 30px;
-    opacity: 1;
     transition: 0.3s;
 }
 
-#generatePassword-btn:hover{opacity: .6;}
+button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+label{
+    color: #10B981;
+    font-family: 'Karla', sans-serif;
+}
+
+.checkbox-box{
+    accent-color: #10B981;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
 
 .divider{
     background-color: #273549;
