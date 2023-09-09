@@ -11,6 +11,8 @@ let specialChar = document.getElementById("special-characters-checkbox");
 let numberChar = document.getElementById("numbers-checkbox");
 
 
+
+
 // This function displays the value picked by the slider
 slider.addEventListener('input',valueChange);
 
@@ -20,13 +22,14 @@ function valueChange(){
     passwordFunction(val);
 }
 
-newPassword1 = '';
-newPassword2 = '';
+let newPassword1 = '';
+let newPassword2 = '';
 
 // This function creates two strings with randomly generated characters
 function passwordFunction(lengthValue) {
     newPassword1 = '';
     newPassword2 = '';
+    
     for(i=0; i < lengthValue; i++){
         if(specialChar.checked == true && numberChar.checked == true){
             randomCharacterPW1 = characters[ (Math.floor( Math.random() * characters.length )) ];
@@ -50,12 +53,11 @@ function passwordFunction(lengthValue) {
             newPassword2 += randomCharacterPW2;
         }
     }
-
 } 
 
 // This function displays two randomly generated strings that match the character length set by the user
 function generatePassword(){
     optionOne.innerText = newPassword1;
     optionTwo.innerText = newPassword2;
-    
+    passwordFunction()
 }
