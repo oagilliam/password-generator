@@ -1,30 +1,34 @@
 body{
-    background-color: #1F2937;
     margin: 0;
+    padding: 0;
+    background:  #1F2937;
+    display: flex;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
 }
 
-.heading-1{
-    color: white;
-    font-family: 'Karla', sans-serif;
+/* Heading Styles */
+.heading-1, .heading-2{
     margin: 0px;
     font-size: 5ch;
 }
 
+.heading-1{
+    color: white;
+}
+
 .heading-2{
     color: #10B981;
-    font-family: 'Karla', sans-serif;
-    margin:0px;
-    font-size: 5ch;
 }
 
 .subheading{
     color: #D5D4D8;
-    font-family: 'Karla', sans-serif;
     font-weight: 10px;
     font-size: 3ch;
     margin-top: 8px;
 }
 
+/* Password Length Container */
 .password-length-container{
     display: flex;
     flex-direction: row;
@@ -32,14 +36,16 @@ body{
     margin-bottom: 5px;
 }
 
+/* Password text style */
 .password-length{
     color: #D5D4D8;
-    font-family: 'Karla', sans-serif;
     font-size: 2.3ch;
-    margin-top: auto;
-    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
+/* Character limit box */
 .value-box{
     width: 5%;
     height: 5%;
@@ -47,7 +53,6 @@ body{
     margin-left: 5px;
     margin-top: auto;
     margin-bottom: auto;
-    font-family: 'Karla', sans-serif;
     border-radius: 6px;
     font-size: 2ch;
     background: #10B981;
@@ -55,27 +60,32 @@ body{
     border: 2px solid #089969;
 }
 
+/* Main Wrapper */
 .main-wrapper{
-    width: 800px;
+    padding: 40px 10px 180px 60px;
+    width: 500px;
     height:400px;
     margin-top: 70px;
-    margin-left: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    border: 2px solid #10B981;
+    border-radius: 6px;
 }
 
+/* Slider styles */
 .slider-container{
-    width: 30%;
+    width: 35%;
 }
 
 #slider-range{
-  -webkit-appearance: none; 
-  appearance: none; 
-  width: 100%; 
-  height: 5px; 
-  background:white;
-  border-radius: 6px;
-  border: none;
-  padding-left: 5px;
-  padding-right: 5px;
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 100%; 
+    height: 5px; 
+    background:white;
+    border-radius: 6px;
+    border: none;
+    padding: 0 5px;
 }
 
 #slider-range::-webkit-slider-thumb {
@@ -86,27 +96,27 @@ body{
     border: 2px solid #089969;;
     border-radius: 50%;
     background:#10B981;
-  }
+}
 
-  #slider-range::-webkit-slider-thumb:active{
-    -webkit-appearance: none;
-    appearance: none;
+#slider-range::-webkit-slider-thumb:active{
     background:#10B981;
     transform: scale(0.85);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
     transition: 0.3s;
-  }
+}
 
-
+/* Button styles */
 button{
     background-color: #10B981;
     text-shadow: 0px 0px .3px #1F2937;
+    font-size: 1.6ch;
     color: white;
     border-radius: 6px;
     border: none;
-    padding: 9px 17px 9px 15px;
+    padding: 15px 5px;
     margin-top: 30px;
     transition: 0.3s;
+    width: 190px;
 }
 
 button:active {
@@ -114,11 +124,12 @@ button:active {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+/* Label styles */
 label{
     color: #10B981;
-    font-family: 'Karla', sans-serif;
 }
 
+/* Checkbox styles */
 .checkbox-box{
     accent-color: #10B981;
 }
@@ -129,26 +140,32 @@ label{
     margin-top: 10px;
 }
 
+/* Divider styles */
 .divider{
     background-color: #273549;
-    margin-top: 35px;
-    margin-bottom: 20px;
+    margin: 35px 0 20px;
     width: 445px;
     height: 1px;
 }
 
+/* Password styles */
 #password1, #password2{
-    display: inline-block;
     background-color: #273549 ;
     color:  #10B981;
     border-radius: 6px;
     width: 211px;
     height: 39px;
     text-align: center;
-    vertical-align: center;
-    line-height: 40px;
+    line-height: 40px; 
 }
 
 #password2{
     margin-left: 20px;
 }
+
+/* Passwords wrapper */
+.passwordsWrapper{
+    display: flex;
+    flex-direction: row;
+}
+

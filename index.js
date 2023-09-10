@@ -6,14 +6,17 @@ const charactersWithoutSpecialCharacters = ["A","B","C","D","E","F","G","H","I",
 let optionOne = document.getElementById("password1");
 let optionTwo = document.getElementById("password2");
 let pwLength = document.getElementById("password-length");
-let slider = document.getElementById("slider-range");
-let specialChar = document.getElementById("special-characters-checkbox");
-let numberChar = document.getElementById("numbers-checkbox");
+const slider = document.getElementById("slider-range");
+const specialChar = document.getElementById("special-characters-checkbox");
+const numberChar = document.getElementById("numbers-checkbox");
 
 
 let newPassword1 = '';
 let newPassword2 = '';
 let val = '';
+optionOne.addEventListener('dblclick', copyPassword1);
+optionTwo.addEventListener('dblclick', copyPassword2);
+
 // This function displays the value picked by the slider
 slider.addEventListener('input',charLengthValue);
 
@@ -23,7 +26,7 @@ function charLengthValue(){
 }
 
 
-// This function creates two strings with randomly generated characters
+// This function creates two strings with randomly generated characters 
 function generatePassword() {
     
     newPassword1 = '';
@@ -53,11 +56,33 @@ function generatePassword() {
         }
         displayPasswords()
     }
-    
 } 
 
 // This function displays two randomly generated strings that match the character length set by the user
 function displayPasswords(){
     optionOne.innerText = newPassword1;
     optionTwo.innerText = newPassword2;
+    
+}
+
+// This function will copy password 1 to clipboard
+function copyPassword1() {
+    const tempInput = document.createElement("input");
+    tempInput.value = newPassword1;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Password 1 copied to clipboard: " + newPassword1);
+}
+
+// This function will copy password 2 to clipboard
+function copyPassword2() {
+    const tempInput = document.createElement("input");
+    tempInput.value = newPassword2;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Password 2 copied to clipboard: " + newPassword2);
 }
