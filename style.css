@@ -169,3 +169,10 @@ label{
     flex-direction: row;
 }
 
+/* Copy text Instructions */
+
+.copy-instruction{
+    color:#10B981;
+    font-size: 1.8ch;
+    margin-top: 1px;
+}
