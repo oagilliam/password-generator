@@ -62,12 +62,9 @@ body{
 
 /* Main Wrapper */
 .main-wrapper{
-    padding: 40px 40px 200px 60px;
-    width: 500px;
-    height:400px;
-    margin-top: 70px;
-    margin-left:auto;
-    margin-right: auto;
+    padding: 40px 40px 70px 40px;
+    max-width: 500%;
+    margin:45px auto 30px auto;
     border: 2px solid #10B981;
     border-radius: 6px;
 }
@@ -151,8 +148,6 @@ label{
 /* Password styles */
 #password1, #password2{
     background-color: #273549 ;
-    color:  #10B981;
-    border-radius: 6px;
     width: 211px;
     height: 39px;
     text-align: center;
@@ -173,6 +168,7 @@ label{
 
 .copy-instruction{
     color:#10B981;
+    border-radius: 6px;
     font-size: 1.8ch;
     margin-top: 1px;
 }
