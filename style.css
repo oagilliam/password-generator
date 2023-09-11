@@ -147,6 +147,8 @@ label{
 
 /* Password styles */
 #password1, #password2{
+    color:#10B981;
+    border-radius: 6px;
     background-color: #273549 ;
     width: 211px;
     height: 39px;
@@ -168,7 +170,6 @@ label{
 
 .copy-instruction{
     color:#10B981;
-    border-radius: 6px;
     font-size: 1.8ch;
     margin-top: 1px;
 }
