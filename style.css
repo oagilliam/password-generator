@@ -2,9 +2,8 @@ body{
     margin: 0;
     padding: 0;
     background:  #1F2937;
-    display: flex;
-    justify-content: center;
     font-family: 'Karla', sans-serif;
+    user-select: none;
 }
 
 /* Heading Styles */
@@ -62,11 +61,14 @@ body{
 
 /* Main Wrapper */
 .main-wrapper{
-    padding: 40px 40px 70px 40px;
-    max-width: 500%;
-    margin:45px auto 30px auto;
-    border: 2px solid #10B981;
-    border-radius: 6px;
+    display: flex;
+    padding: 40px;
+    margin: 25px auto;
+    justify-content: space-around;
+}
+
+img{
+    width: 600px;
 }
 
 /* Slider styles */
